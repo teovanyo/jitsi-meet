@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: jitsi/web:latest
+    restart: unless-stopped
+    ports:
+      - "8000:80"
+    environment:
+      - ENABLE_AUTH=0
+      - ENABLE_GUESTS=1
+      - XMPP_DOMAIN=meet.jitsi
+      - XMPP_SERVER=xmpp.meet.jitsi
