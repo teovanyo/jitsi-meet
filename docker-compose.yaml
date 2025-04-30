@@ -4,8 +4,8 @@ services:
   web:
     image: jitsi/web:stable
     restart: unless-stopped
-    ports:
-      - "8181:80"
+    expose:
+      - "80"
     environment:
       - ENABLE_AUTH=0
       - ENABLE_GUESTS=1
