@@ -5,7 +5,7 @@ services:
     image: jitsi/web:stable
     restart: unless-stopped
     ports:
-      - "8000:80"
+      - "8080:80"
     environment:
       - ENABLE_AUTH=0
       - ENABLE_GUESTS=1
